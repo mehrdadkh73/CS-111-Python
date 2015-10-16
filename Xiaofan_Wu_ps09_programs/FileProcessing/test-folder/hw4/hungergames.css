@@ -1,0 +1,61 @@
+/* Filename: hungergames.css 
+   Purpose:  Style for assignment 4 Hunger Games website
+   Author: YOUR NAME
+   Date Modified: DATE
+*/
+
+
+/*---------------------------------------------------------------------------*/
+/* Some instructions on how to proceed for creating your stylesheet.
+   YOU CAN DELETE THEM AFTER COMPLETING THE ASSIGNMENT.
+   Author: Eni Mustarafaj
+   Date: Feb 14, 2014
+
+   1. Start by centering the body with fixed-width 960px and specify the 
+   background color, the font size, and letter spacing.
+
+   2. Style the header element using three images for the background. You 
+   should not forget to set the height as well.
+
+   3. Style the nav element. It has a fixed-width of 800px and is centered.
+
+   4. Style the nav items elements, they have margin and padding of 10px, 
+   border 1px, letter spacing of 5px and font family Geo (sans serif).
+  
+   5. Style the links of the nav items. Don't forget to apply shadow.
+
+   6. Specify style for the :hover pseudo-class.
+
+   The steps above are for the parts of the website that don't change. Below
+   you do the styling for the "homepage" and "character" pages.
+
+   For "homepage" (hungergames.html)
+   7. Specify rules for the sections of "homepage", creating the layout as 
+   shown in the pictures, the box shadow and rounded border, and other 
+   paragraph styling that you need to come close to the screenshot.
+
+   For "character" pages (gale, katniss, peeta)
+   8. Style the section element for these kind of pages. Keep in mind the 
+   layout of the page.
+
+   9. Style the aside element, watch video to understand its layout.
+
+   10. Style the figure element.
+
+   11. Style the figcaption element. Don't forget that it has text shadow. 
+*/
+
+/*---------------------------------------------------------------------------*/
+
+/* A fix for semantic tags to be recognized by old browsers */
+aside, figure, header, nav, main, section {
+  display: block;
+}
+
+body {
+  font-family: "Roboto", "sans serif";
+}
+
+
+
+                    

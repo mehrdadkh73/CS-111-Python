@@ -1,0 +1,58 @@
+from cs1graphics import *
+import random
+import math
+
+# Creates a size x size white canvas containing:
+# (1) radius-5 circles centered at each point in pointList.
+# (2) for each color in colorList, a Polygon whose border is
+#     that color. The first color (i.e., element at colorList[0])
+#     is associated with a polygon with increment 1, the second
+#     color is associated with a polygon with increment 2, and
+#     so on. See stringPolygon for a definition of "increment". 
+def stringArt(size, pointList, colorList):
+    '''Flesh out this function'''
+
+# Returns a Polygon object that connects a subset of (and possibly all)
+# the points in pointList with lines of the given color.
+#
+# The polygon starts at the initial point in pointList, and then visits
+# the remaining points according to increment. 
+# * If increment is 1, all points in pointList are visited in order.
+# * If increment is 2, every other point in pointList is visited in order, 
+#   wrapping back to the beginning of pointList when the end is reached. 
+# * If increment is 3, every third point in pointList is visited in order,
+#   wrapping when necessary. 
+# * In general, if increment is i, every ith point in pointList is visited
+#   in order, wrapping when necessary.
+#
+# Let n be the number of points in pointList. Then the resulting Polygon
+# object should have n lines, but some of the lines may be repeated.  
+# E.g, when n is 8 and increment is 2, the Polygon will appear to have 4 lines,
+# and when n is 8 and increment is 4, the Polygon will appear to have a 
+# single line. 
+def stringPolygon(increment, pointList, color):
+    '''Flesh out this function'''
+
+# Returns a list with numPoints points arranged equidistantly 
+# around a circle with the given radius centered at (x,y)      
+def makeCircularPoints(numPoints, x, y, radius):
+    pointList = []
+    angle = 2*math.pi/numPoints # in radians
+    for i in range(0, numPoints):
+        pointList.append(Point(x + radius*math.sin(i*angle),
+                               y + radius*math.cos(i*angle)))
+        
+    return pointList
+                
+# Test cases:
+stringArt(500, 
+          [Point(100,100), Point(100,300), Point(250,400),
+           Point(400,300), Point(400,100)],
+          ['red','blue'])    
+stringArt(500, makeCircularPoints(7, 250, 250, 225), 
+          ['red', 'green', 'blue'])
+stringArt(500, makeCircularPoints(8, 250, 250, 225), 
+          ['red', 'green', 'blue', 'magenta'])
+stringArt(500, makeCircularPoints(13, 250, 250, 225), 
+          ['red','blue','green','magenta','cyan'])
+
